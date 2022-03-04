@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #ffffff;
+    /* height: 100vh; */
+}
+
+.dashboard {
+    max-width: 1440px;
+    display: grid;
+    padding: 20px;
+    margin: 100px auto;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+}
+
+nav,
+aside,
+.team,
+.messages,
+.my-work,
+.page-hero,
+.board,
+.redesign {
+    background: #333333;
+    box-shadow: 0 12px 13px rgba(0, 0, 0, .25);
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.tab-display h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.tab-display p {
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 60%;
+}
+
+nav {
+    grid-column: 1/2;
+    grid-row: 1/10;
+}
+
+.team {
+    grid-column: 2/8;
+    grid-row: 1/6;
+}
+
+aside {
+    grid-column: 11/13;
+    grid-row: 1/10;
+}
+
+.messages {
+    grid-column: 8/11;
+    grid-row: 1/2;
+}
+
+.my-work {
+    grid-column: 8/11;
+    grid-row: 2/6;
+}
+
+.page-hero {
+    grid-column: 2/5;
+    grid-row: 6/10;
+}
+
+.board {
+    grid-column: 5/8;
+    grid-row: 6/10;
+}
+
+.redesign {
+    grid-column: 8/11;
+    grid-row: 6/10;
+}
+
+nav .tab {
+    background: #0ca3e9;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.tab-display .tab-display-icon {
+    background: #0ca3e9;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.tab-display,
+.team .team-member {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 1.5rem;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tab-display {
+    width: 100%;
+}
+
+.team .team-member .team-member-img {
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    background: #94e90c;
+    border-radius: 50%;
+}
+
+.my-work-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-work-info-group {
+    padding-right: 15px;
+    margin-top: 15px;
+}
+
+.my-work-info-group h5 {
+    opacity: 70%;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #c1e90c;
+}
+
+.indicator.indicator-danger {
+    background-color: #e95d0c;
+}
+
+.my-work-info-group p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-progress {
+    margin-top: 15px;
+}
+
+
+.card-progress-user {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-progress-user-img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #94e90c;
+    margin-right: 5px;
+}
+
+.card-progress-bar-wrap p {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    opacity: 50%;
+    text-align: end;
+}
+
+.card-progress-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background: #555555;
+}
+
+.card-progress-bar-fill {
+    width: 60%;
+    height: 10px;
+    border-radius: 10px;
+    background: #0ca3e9;
+}
+
+.card-progress-tag {
+    margin-top: 10px;
+    width: auto;
+    background-color: #555555;
+    border-radius: 15px;
+    padding: 2px 5px;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        margin: auto;
+    }
+    nav {
+        display: none;
+    }
+
+    .team {
+        grid-column: 1/13;
+        grid-row: 3;
+    }
+
+    aside {
+        grid-column: 1/13;
+        grid-row: 7;
+    }
+
+    .messages {
+        grid-column: 1/13;
+        grid-row: 1;
+    }
+
+    .my-work {
+        grid-column: 1/13;
+        grid-row: 2;
+    }
+
+    .page-hero {
+        grid-column: 1/13;
+        grid-row: 5;
+    }
+
+    .board {
+        grid-column: 1/13;
+        grid-row: 6;
+    }
+
+    .redesign {
+        grid-column: 1/13;
+        grid-row: 4;
+    }
+}
